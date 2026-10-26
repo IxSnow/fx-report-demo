@@ -1,0 +1,12 @@
+# Configuración del pipeline fx-report.
+# Divisas soportadas por la API Frankfurter (BCE): AUD, BRL, CAD, CHF, CNY,
+# CZK, DKK, EUR, GBP, HKD, HUF, IDR, ILS, INR, ISK, JPY, KRW, MXN, MYR, NOK,
+# NZD, PHP, PLN, RON, SEK, SGD, THB, TRY, USD, ZAR.
+# Nota: el dataset gratuito del BCE no incluye CLP; por eso el ejemplo sigue
+# la fuerza del dólar (USD) frente a una canasta de divisas.
+
+base: "USD"
+symbols: ["EUR", "BRL", "MXN", "GBP", "JPY"]
+days: 14
+alert_threshold_pct: 1.0   # alerta si una divisa se mueve más que esto en el último día
+out_dir: "output"
